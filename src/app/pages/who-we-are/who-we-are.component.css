@@ -1,0 +1,99 @@
+/* Contenedor principal */
+.who-we-are-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Estilo para el texto */
+  .text-container {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .text-container p {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  /* Estilo para la imagen */
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Opcional: para bordes redondeados */
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .who-we-are-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-container {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .image-container {
+      margin-top: 20px;
+    }
+  
+    .text-container p {
+      text-align: left;
+    }
+  }
+  /*Estilos para el cuadro con datos*/
+  .data-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #cccccc;
+    border-radius: 8px;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en líneas nuevas */
+    overflow-x: auto; /* Añade scroll horizontal si es necesario en pantallas muy pequeñas */
+  }
+  
+  .data-item {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px; /* Espaciado horizontal entre los elementos */
+  }
+  
+  .data-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .data-item p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Opcional: Ajusta los estilos para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .data-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .data-item p {
+      font-size: 14px;
+    }
+  }
+  .whoWeAre-title {
+    font-size: 2rem;
+    color: #e01e01;
+    margin-bottom: 20px;
+}

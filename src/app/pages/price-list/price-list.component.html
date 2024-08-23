@@ -1,0 +1,15 @@
+<div class="price-list-container">
+    <h3>Liste de Prix</h3>
+  
+    <div class="image-grid">
+      <img src="{{ diversTravauxImage }}" alt="Divers Travaux" (click)="openModal(diversTravauxImage)">
+      <img src="{{ maconnerieImage }}" alt="Maçonnerie" (click)="openModal(maconnerieImage)">
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal" *ngIf="selectedImage">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <img class="modal-content" [src]="selectedImage">
+    </div>
+  </div>
+  

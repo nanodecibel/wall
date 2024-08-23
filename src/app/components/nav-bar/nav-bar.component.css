@@ -1,0 +1,56 @@
+/* Ajustes generales para el navbar */
+.navbar {
+  padding: 10px 20px;
+}
+
+/* Ajustes para el logo */
+.navbar-logo {
+  max-height: 50px;
+  width: auto;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-logo {
+    max-height: 40px; /* Tamaño reducido del logo en pantallas pequeñas */
+  }
+
+  .navbar-toggler {
+    order: -1; /* Mueve el toggler-icon a la izquierda del logo */
+    margin-right: auto; /* Añade espacio a la derecha del toggler */
+  }
+}
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 769px) {
+  .navbar-logo {
+    max-height: 60px; /* Tamaño del logo en pantallas grandes */
+  }
+
+  .navbar-nav {
+    margin-left: auto; /* Alinea las opciones del navbar a la derecha del logo */
+  }
+}
+
+/* Estilos personalizados del navbar */
+.navbar-custom {
+  background-color: #f8f9fa; /* Fondo claro para el navbar */
+  color: #000;
+}
+
+.navbar-custom .nav-link {
+  color: #e01e01; /* Color de texto para los enlaces */
+}
+
+.navbar-custom .nav-link:hover {
+  color: #000; /* Color al pasar el ratón sobre los enlaces */
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: #e01e01; /* Color del borde del toggler */
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(224, 30, 1, 1)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  background-color: transparent; /* Asegura que el fondo del ícono sea transparente */
+}

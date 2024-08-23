@@ -1,0 +1,36 @@
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  #whatsapp-button img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #whatsapp-button.expand {
+    width: 160px; /* Ajusta el ancho cuando se expande */
+    height: 60px; /* Mantén la altura constante */
+    border-radius: 10px; /* Bordes suavizados */
+  }
+  
+  #whatsapp-button.expand img {
+    margin-right: 10px;
+  }
+  
+  #whatsapp-button.expand::after {
+    content: 'Demander un devis';
+    color: white;
+    font-weight: bold;
+  }
+  

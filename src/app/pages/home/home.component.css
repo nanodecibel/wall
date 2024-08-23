@@ -1,0 +1,66 @@
+/* Ajustes generales */
+.home-container {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido adicional no salga del contenedor */
+}
+
+/* Capa de imagen de fondo con filtro de escala de grises */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://res.cloudinary.com/dactwdkqr/image/upload/v1724174001/Wall/home/coad7fb8gpybd1tjwnoe.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%); /* Aplica blanco y negro solo a la imagen */
+    z-index: 0; /* Coloca la imagen en el fondo */
+}
+
+/* Superposición para oscurecer la imagen y hacer el texto más legible */
+.overlay {
+    position: relative;
+    z-index: 1; /* Coloca la superposición sobre la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con transparencia */
+    padding: 20px; /* Asegura que el texto no toque los bordes */
+    text-align: center;
+}
+
+/* Estilo del texto */
+.home-title {
+    color: white;
+    font-size: 2.5rem; /* Tamaño un poco más pequeño */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Añade espacio debajo del título */
+}
+
+/* Estilo para el texto cambiante */
+.changing-text {
+    color: #e01e01; /* Color rojo específico */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-right: 3px solid #e01e01; /* Simula el cursor de escritura */
+    white-space: nowrap; /* Evita que el texto salte a la siguiente línea */
+    overflow: hidden; /* Oculta el texto que no cabe en el contenedor */
+    display: inline-block; /* Asegura que el texto no ocupe más espacio del necesario */
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+/* Animación para el efecto de escritura */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #e01e01 }
+}
